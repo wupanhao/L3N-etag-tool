@@ -1,0 +1,24 @@
+<view class="container">
+  <text style="font-size:medium;word-break:break-all">设备名称：{{name}}</text>
+  <text style="font-size:x-small;color:gray;word-break:break-all">设备ID：{{connectedDeviceId}}</text>
+  <text style="font-size:x-small;color:gray">状态：{{connected?"已连接":"已断开"}}</text>
+  <text style="font-size:medium;margin-top:10px">发送内容：</text>
+  <input class="input" value="{{inputText}}" bindinput="bindInput" maxlength="20"/>
+  <button type="primary" class="button" bindtap="SendInputCmd">发送指令</button>
+  <view class="section">
+    <button type="primary" class="small" bindtap="SwitchMode0">图片模式</button>
+    <button type="primary" class="small" bindtap="SwitchMode1">时钟一</button>
+    <button type="primary" class="small" bindtap="SwitchMode2">时钟二</button>
+  </view>
+  <!-- text style="font-size:medium;margin-top:10px">图片模式e100 时钟模式一e101 时钟模式二e102</text -->
+  <button type="primary" class="button" bindtap="uploadImage">上传图片</button>
+  <canvas type="2d" id="myCanvas" style="width:296px;height:128px;border: 1px solid grey;"></canvas>
+  <br/>
+  <button type="primary" class="button" bindtap="SendImage">发送图片</button>
+</view>
+
+<view class="section">
+  <textarea id="log" bindblur="bindTextAreaBlur" disabled maxlength="-1" style="width:100%;" placeholder="Log" value="{{logText}}" />
+</view>
+
+<button type="primary" class="button" bindtap="SetTime">同步时间</button>

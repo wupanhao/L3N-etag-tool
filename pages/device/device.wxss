@@ -1,0 +1,25 @@
+page {
+  background-color: #f8f8f8;
+}
+.container {
+  padding: 30rpx;
+  align-items: left;
+}
+.input {
+  margin-top:3px;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+}
+.button {
+  /* position: fixed; */
+  width: 690rpx;
+  bottom: 10rpx;
+  margin-top: 10px;
+}
+
+.small{
+  width: 200rpx;
+  margin-right: 10px;
+   display:inline-block;
+}
